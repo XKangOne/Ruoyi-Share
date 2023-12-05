@@ -139,9 +139,6 @@
         </template>
       </el-table-column>
       <el-table-column label="审核状态" align="center" prop="auditStatus" >
-        <template slot-scope="scope">
-          <dict-tag :options="dict.type.sys_normal_disable" :value="scope.row.auditStatus"></dict-tag>
-        </template>
       </el-table-column>
       <el-table-column label="审核不通过原因" align="center" prop="reason" />
       <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
