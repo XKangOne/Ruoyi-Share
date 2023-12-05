@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.share.mapper.ShareMapper">
+
+    <resultMap type="Share" id="ShareResult">
+        <result property="id"    column="id" />
+        <result property="userId"    column="user_id" />
+        <result property="title"    column="title" />
+        <result property="createTime"    column="create_time" />
+        <result property="updateTime"    column="update_time" />
+        <result property="remark"    column="remark" />
+        <result property="createBy"    column="create_by" />
+        <result property="updateBy"    column="update_by" />
+        <result property="isOriginal"    column="is_original" />
+        <result property="author"    column="author" />
+        <result property="cover"    column="cover" />
+        <result property="summary"    column="summary" />
+        <result property="price"    column="price" />
+        <result property="downloadUrl"    column="download_url" />
+        <result property="buyCount"    column="buy_count" />
+        <result property="showFlag"    column="show_flag" />
+        <result property="auditStatus"    column="audit_status" />
+        <result property="reason"    column="reason" />
+    </resultMap>
+
+
+</mapper>
