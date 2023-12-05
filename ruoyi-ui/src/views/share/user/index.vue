@@ -110,10 +110,10 @@
       <el-table-column label="角色" align="center" prop="roles" />
       <el-table-column label="头像地址" align="center" prop="avatarUrl" >
         <template #default="scope">
-                <div style="text-align: center;">
-                    <el-image style="width: 80px; height: 80px" :src="scope.row.avatarUrl"/>
-                </div>
-            </template>
+          <div style="text-align: center;">
+              <el-image style="width: 80px; height: 80px" :src="scope.row.avatarUrl"/>
+          </div>
+        </template>
       </el-table-column>
       <el-table-column label="积分" align="center" prop="bonus" />
       <!-- <el-table-column label="${comment}" align="center" prop="remark" /> -->
@@ -276,6 +276,7 @@ export default {
           }
           return item.avatarUrl;
         })
+        console.log(this.userList)
       });
     },
     // 取消按钮
@@ -372,7 +373,7 @@ export default {
     },
     handleSuccess(response) {
       console.log(response);
-      this.form.cover = response.coverUrl;
+      this.form.avatarUrl = response.avatarUrl;
       // this.submitForm();
       
     },

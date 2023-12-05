@@ -33,11 +33,7 @@ public class ShareServiceImpl extends ServiceImpl<ShareMapper, Share> implements
     @Resource
     private ShareMapper shareMapper;
 
-    @Resource
-    private MidUserShareMapper midUserShareMapper;
 
-    @Resource
-    private IUserService iUserService;
 
     /**
      * 查询分享列表
