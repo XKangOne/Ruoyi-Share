@@ -138,7 +138,8 @@
           <div v-else style="background-color: beige;">不显示</div>
         </template>
       </el-table-column>
-      <el-table-column label="审核状态" align="center" prop="auditStatus" />
+      <el-table-column label="审核状态" align="center" prop="auditStatus" >
+      </el-table-column>
       <el-table-column label="审核不通过原因" align="center" prop="reason" />
       <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
         <template slot-scope="scope">

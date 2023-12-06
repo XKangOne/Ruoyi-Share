@@ -65,7 +65,12 @@
       <el-table-column type="selection" width="55" align="center" />
       <el-table-column label="id" align="center" prop="id" />
       <el-table-column label="内容" align="center" prop="content" />
-      <el-table-column label="是否显示 0:否 1:是" align="center" prop="showFlag" />
+      <el-table-column label="是否显示" align="center" prop="showFlag" >
+        <template slot-scope="scope">
+          <div v-if="scope.row.showFlag" style="background-color: rosybrown;" >显示</div>
+          <div v-else style="background-color: beige;">不显示</div>
+        </template>
+      </el-table-column>
       <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
         <template slot-scope="scope">
           <el-button
@@ -100,8 +105,12 @@
         <el-form-item label="内容">
           <editor v-model="form.content" :min-height="192"/>
         </el-form-item>
-        <el-form-item label="是否显示 0:否 1:是" prop="showFlag">
-          <el-input v-model="form.showFlag" placeholder="请输入是否显示 0:否 1:是" />
+        <el-form-item label="是否显示" prop="showFlag">
+          <el-radio-group v-model="form.showFlag">
+            <el-radio label="0">显示</el-radio> 
+            <el-radio label="0">不显示</el-radio>
+          </el-radio-group>
+          <!-- <el-input v-model="form.showFlag" placeholder="请输入是否显示 0:否 1:是" /> -->
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
