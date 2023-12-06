@@ -12,6 +12,8 @@ import com.ruoyi.share.mapper.MidUserShareMapper;
 import com.ruoyi.share.domain.MidUserShare;
 import com.ruoyi.share.service.IMidUserShareService;
 
+import javax.annotation.Resource;
+
 /**
  * 用户-分享中间【描述用户购买的分享】Service业务层处理
  *
@@ -21,7 +23,7 @@ import com.ruoyi.share.service.IMidUserShareService;
 @Service
 public class MidUserShareServiceImpl extends ServiceImpl<MidUserShareMapper, MidUserShare> implements IMidUserShareService {
 
-    @Autowired
+    @Resource
     private MidUserShareMapper midUserShareMapper;
 
     /**
