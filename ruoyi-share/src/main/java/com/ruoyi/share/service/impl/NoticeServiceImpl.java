@@ -12,6 +12,8 @@ import com.ruoyi.share.mapper.NoticeMapper;
 import com.ruoyi.share.domain.Notice;
 import com.ruoyi.share.service.INoticeService;
 
+import javax.annotation.Resource;
+
 /**
  * 信息Service业务层处理
  *
@@ -21,7 +23,7 @@ import com.ruoyi.share.service.INoticeService;
 @Service
 public class NoticeServiceImpl extends ServiceImpl<NoticeMapper, Notice> implements INoticeService {
 
-    @Autowired
+    @Resource
     private NoticeMapper noticeMapper;
 
     /**
