@@ -36,8 +36,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
     @Resource
     private BonusEventLogMapper bonusEventLogMapper;
-    @Resource
-    private ShareServiceImpl shareService;
 
     /**
      * 查询分享列表
